@@ -1,0 +1,479 @@
+@font-face {
+  font-family: "Philosopher-Bold";
+  src:url(fonts/Poppins/Poppins-Bold.ttf);
+  font-weight: normal;
+  font-style: normal;
+
+}
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+#restaurant
+{
+  
+  width: 69%;
+  
+}
+
+#pasta
+{
+  width: 80%;
+  
+  
+}
+img
+{
+  margin:2%;
+  border-radius: 5%;
+  
+}
+nav
+{
+  
+  background-color: #897b76; /* accent color 2 */
+  text-align: center;
+  border-radius: 5px;
+  margin: -8px;
+  padding:4px;
+}
+a
+{
+  color: #f9f6e6;
+  inline-size: 2px;
+  padding: 10px;
+  text-decoration: none;
+ 
+}
+a:hover
+{
+  background-color: #34322e;
+  color:#FFFFFF;
+  padding-top: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 0px;
+  
+}
+#title
+{
+
+  text-align:center;
+  background-color: #f9f6e6; /* primary color */
+  border: solid #eccb3a; /* primary color */
+  color: #FFFFFF; /* accent color 1 */
+  border-radius: 5px;
+  margin: -8px;
+  padding: 10px;
+  font-family: helvetica;
+  font-weight: bold;
+  transition: 0.7s;
+}
+body
+{
+  background-color: #34322e;
+} 
+
+
+header
+{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  transition:0.7s;
+  z-index: 10;
+  
+}
+
+/*CONTAINER PRESENTATION AND VIDEO*/
+.container_presentation{
+width: 100%;
+height: max-content;
+background-color: #bf4849;
+border-radius: 10px;
+margin-bottom: 20px;
+
+} 
+
+/*CONTAINER ONLY PRESENTATION*/
+.cont{
+display: flex;
+align-items: center;
+justify-content: center;
+position: absolute; /*POSITION ABSOLUTE OF CONTAINER*/
+top: 19.5%;
+flex-wrap: wrap;
+width: 100%;
+height: max-content;
+}
+
+video
+{
+  width: 100%;
+  display: flex; /*DISPLAY*/
+  margin-top: 7%; /*MARGIN*/
+  opacity: 0.7;
+  position: relative;
+  
+}
+
+
+#ourRestaurant, #welcome{
+  z-index: 9;
+  color: #eac8bc;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  width: 48%;
+  height: auto;
+  background-color: #413d3c50;
+  padding: 2%;
+  border-radius: 5%;
+  margin-left: 20px;
+  top:0;
+  transition: all 300ms;
+  
+}
+
+
+  
+#welcome:hover, #ourRestaurant:hover{
+  background-color: #f9f6e6;
+  color: #bf4849;
+  border-radius: 10px;
+  cursor: pointer;
+}  
+
+
+
+.menu-container{
+  display: flex;
+  
+  
+} 
+
+
+.cart{
+  width: 26%;
+  background-color: #f9f6e6;
+  border:1px solid #bf4849 ;
+  border-radius: 10px;
+  overflow: hidden;
+  position: sticky !important;
+  top:135px;
+  transition: 0.3s;
+  height: 600px;
+  overflow-y: scroll;
+  opacity: 0;
+  margin-right: -100%;
+  
+}
+.cart .header-cart{
+  text-align: center;
+  padding: 30px;
+  
+}
+.cart .header-cart h2{
+  text-shadow: none;
+}
+.cart .cart-item{
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-bottom: 1px solid;
+  padding: 0px;
+}
+
+.cart .cart-item .cart-item-title{
+
+  display:block;
+  font-weight: bold;
+  text-transform: uppercase;
+  color:#413d3c;
+}
+
+.cart .cart-item .quantity-selector{
+  display: inline-block;
+  padding: 20px;
+}
+.cart .cart-item .cart-item-quantity{
+  border:none;
+  font-size: 18px;
+  background: transparent;
+  display: inline-block;
+  width: 30px;
+  padding: 5px;
+  text-align: center;
+}
+.cart .cart-item .quantity-selector span{
+  font-size: 18px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #413d3c;
+  cursor:pointer;
+} 
+.cart .cart-item .cart-item-price{
+  font-weight: bold;
+  display: inline-block;
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: #413d3c;
+}
+.cart .cart-item .btn-delete{
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  border: 1px solid #413d3c;
+  cursor: pointer;
+  display: block;
+  background: transparent;
+  z-index: 20;
+  color:#bf4849;
+  margin-left:50px;
+  margin-right: 0;
+}
+.cart .cart-item .btn-delete span{
+  pointer-events: none;
+}
+.cart-total{
+  background-color: #bf4849;
+  padding: 30px;
+}
+.cart-total .line{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.cart-total .btn-pay{
+  display: block;
+  width: 40%;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 10px;
+  margin: 0 auto;
+  background-color: #f9f6e6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor:pointer;
+  transition: 0.3s;
+}
+
+.cart-total .btn-pay:hover{
+  scale:1.05;
+}
+
+ 
+
+h1{
+  font-weight: bold;
+  font-family:cursive;
+  padding: 10px;
+}
+
+h2{
+  font-family: 'Philosopher-Bold';
+  font-size: 35px;
+  color: #bf4849;
+  text-shadow: 1px 0px 1px #413d3c, 1px 0px 3px #413d3c, 1px 0px 5px #413d3c;
+  
+  } 
+  .menu h5{
+    font-family: 'Philosopher-Bold';
+    font-size: 22px;
+    font-weight: bold;
+    color: #bf4849;
+    text-shadow: 1px 0px 1px #eac8bc, 1px 0px 3px #eac8bc, 1px 0px 5px #eac8bc;
+    
+    }
+p{
+  width: 85%;
+  padding-left: 10px;
+  text-align: justify;
+}
+#logo{
+
+  height:102px;
+  margin:0;
+}
+
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48; 
+    color: #eac8bc;
+    padding: 0px;
+    margin: 5px;
+  } 
+  
+  .Title_menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 40px;
+  
+  } 
+  
+  #Title_Menu_Img{
+    width: 32px;
+    height: auto;
+    margin: 20px;
+    align-items: center;
+  }
+  
+  .menu_driscrep{
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+  }
+  
+  .menu{ 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    margin: 10px;
+    background-color: #897b76;
+    border: 1px solid #eac8bc;
+    border-radius: 10px;
+    box-shadow: 1px 2px 5px #bf4849;
+    transition: all 500ms;
+  }
+  
+  .menu:hover{
+    background-color: #bf4849;
+    cursor: pointer;
+  }
+  
+  .menu img{
+    width: 300px;
+    height: auto;
+  }
+  
+  .menu h3{
+    font-family: 'Philosopher-Bold';
+    font-size: 30px;
+    text-align: center;
+    color:  #eac8bc;
+    margin: 3px auto;
+  } 
+  
+  .menu p{
+    color: #f9f6e6;
+    font-family: 'Philosopher-Bold' ;
+    font-size: 18px;
+    text-align: justify;
+    text-shadow: 0px 0px 2px #ccc;
+    margin: 5px auto;
+  }
+  
+  .menu button{
+    margin: 5px auto;
+    padding: 10px;
+    border: 1px solid #897b76;
+    border-radius: 15px;
+    transition: all 500ms;
+  }
+  
+  .menu button:hover{
+    background-color: #eac8bc;
+    cursor: pointer;
+  }
+  
+  .menu button h2{
+    font-size: 20px;
+  }
+  
+  .Cards__Menu{
+    height: max-content;
+  }
+
+  .menu-container2{ 
+    
+   width: 100%;
+    
+  }
+  
+footer{
+  background-color: #897b76; /* accent color 2 */
+  text-align: center;
+  border-radius: 5px;
+  margin: -1px;
+  padding:10px;
+  margin-top: 40px;
+}
+footer p{
+  text-align: center;
+}
+
+
+/*RESPONSIVE*/
+
+@media (max-width: 1563px) {
+.container_presentation{ 
+
+ background-color: #bf484995;
+ height: 930px;
+  
+ } 
+} 
+
+@media (max-width: 1402px) {
+.container_presentation{ 
+ height: 900px;
+ } 
+} 
+
+
+@media (max-width: 1127px) {
+    
+.menu-container{
+  flex-direction: column;
+  
+  
+} 
+
+
+}
+
+@media (max-width: 1000px) {
+    .container_presentation{ 
+        height: 1770px;
+      
+    } 
+
+    
+    .cart{
+      width: 100% !important; 
+      height: 1000px;
+
+    } 
+
+    
+  #ourRestaurant, #welcome{
+    width: 99%;
+    padding: 5%;
+    margin-left: 1%;
+    margin-bottom: 20px;
+    
+  }
+
+}
+
+      
